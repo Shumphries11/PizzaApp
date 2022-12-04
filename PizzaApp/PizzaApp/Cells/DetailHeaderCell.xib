@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DetailHeaderCell" customModule="PizzaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtM-HT-TpC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="612"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-9y-th4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="474"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="AppRed"/>
+                        <constraints>
+                            <constraint firstItem="oJR-9y-th4" firstAttribute="leading" secondItem="XtM-HT-TpC" secondAttribute="leading" id="2pc-LK-GAr"/>
+                            <constraint firstItem="oJR-9y-th4" firstAttribute="top" secondItem="XtM-HT-TpC" secondAttribute="top" id="Htr-Lg-5QO"/>
+                            <constraint firstAttribute="bottom" secondItem="oJR-9y-th4" secondAttribute="bottom" constant="138" id="Y9p-Se-XbT"/>
+                            <constraint firstAttribute="trailing" secondItem="oJR-9y-th4" secondAttribute="trailing" id="dzn-bu-49m"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="XtM-HT-TpC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7vh-rn-LMc"/>
+                <constraint firstItem="XtM-HT-TpC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E19-JY-Lc4"/>
+                <constraint firstAttribute="bottom" secondItem="XtM-HT-TpC" secondAttribute="bottom" id="jv4-tn-rwa"/>
+                <constraint firstAttribute="trailing" secondItem="XtM-HT-TpC" secondAttribute="trailing" id="wRL-sb-fsN"/>
+            </constraints>
+            <connections>
+                <outlet property="detailHeader" destination="XtM-HT-TpC" id="toy-Wq-UlO"/>
+            </connections>
+            <point key="canvasLocation" x="138.1679389312977" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppRed">
+            <color red="1" green="0.19215686274509802" blue="0.19215686274509802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
