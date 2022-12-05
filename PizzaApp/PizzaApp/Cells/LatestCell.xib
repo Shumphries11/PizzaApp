@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LatestCell" customModule="PizzaApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="327" height="123"/>
+            <rect key="frame" x="0.0" y="0.0" width="327" height="109"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="327" height="123"/>
+                <rect key="frame" x="0.0" y="0.0" width="327" height="109"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkt-Pw-53j">
-                        <rect key="frame" x="0.0" y="0.0" width="327" height="108"/>
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="109"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
@@ -32,7 +32,7 @@
                 <constraint firstAttribute="trailing" secondItem="qkt-Pw-53j" secondAttribute="trailing" id="2rD-wz-eW8"/>
                 <constraint firstItem="qkt-Pw-53j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="O0j-S4-K1d"/>
                 <constraint firstItem="qkt-Pw-53j" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Pfn-a9-Vdm"/>
-                <constraint firstAttribute="bottom" secondItem="qkt-Pw-53j" secondAttribute="bottom" constant="15" id="g96-pv-k1q"/>
+                <constraint firstAttribute="bottom" secondItem="qkt-Pw-53j" secondAttribute="bottom" id="g96-pv-k1q"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">

@@ -73,6 +73,7 @@ class ViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
                 return section
+                
             case .recommended:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(269), heightDimension: .absolute(166))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -85,6 +86,7 @@ class ViewController: UIViewController {
                 section.orthogonalScrollingBehavior = .groupPaging
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
                 return section
+                
             case .latestHeader:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(27))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -96,16 +98,18 @@ class ViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
                 return section
+                
             case .latest:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(327), heightDimension: .absolute(123))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(327), heightDimension: .absolute(109))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.20), heightDimension: .absolute(123))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.20), heightDimension: .absolute(109))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
+                section.interGroupSpacing = 15
                 return section
 
             default:
