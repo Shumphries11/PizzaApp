@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RecommendedHeader" customModule="PizzaApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="191" height="27"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="191" height="27"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDl-ig-BJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="191" height="27"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="qDl-ig-BJ7" secondAttribute="bottom" id="09l-jf-5hC"/>
+                <constraint firstItem="qDl-ig-BJ7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UYM-fq-pU5"/>
+                <constraint firstAttribute="trailing" secondItem="qDl-ig-BJ7" secondAttribute="trailing" id="itR-Cr-PEr"/>
+                <constraint firstItem="qDl-ig-BJ7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="v1g-ea-rWO"/>
+            </constraints>
+            <connections>
+                <outlet property="recommendedHeader" destination="qDl-ig-BJ7" id="LCC-6h-SSU"/>
+            </connections>
+            <point key="canvasLocation" x="138.1679389312977" y="19.366197183098592"/>
+        </collectionViewCell>
+    </objects>
+</document>

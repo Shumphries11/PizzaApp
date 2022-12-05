@@ -17,8 +17,11 @@ struct Section: Hashable {
     enum ItemSectionType: String {
         case homeHeader
         case search
+        case categoriesHeader
         case categories
+        case recommendedHeader
         case recommended
+        case latestHeader
         case latest
         case detailHeader
         case detailFooter
@@ -36,8 +39,11 @@ struct Section: Hashable {
         
         static let homeHeader = SectionType(rawValue: Section.ItemSectionType.homeHeader.rawValue)
         static let search = SectionType(rawValue: Section.ItemSectionType.search.rawValue)
+        static let categoriesHeader = SectionType(rawValue: Section.ItemSectionType.categoriesHeader.rawValue)
         static let categories = SectionType(rawValue: Section.ItemSectionType.categories.rawValue)
+        static let recommendedHeader = SectionType(rawValue: Section.ItemSectionType.recommendedHeader.rawValue)
         static let recommended = SectionType(rawValue: Section.ItemSectionType.recommended.rawValue)
+        static let latestHeader = SectionType(rawValue: Section.ItemSectionType.latestHeader.rawValue)
         static let latest = SectionType(rawValue: Section.ItemSectionType.latest.rawValue)
         static let detailHeader = SectionType(rawValue: Section.ItemSectionType.detailHeader.rawValue)
         static let detailFooter = SectionType(rawValue: Section.ItemSectionType.detailFooter.rawValue)

@@ -14,15 +14,15 @@ class ViewController: UIViewController {
             
             switch sectionType {
             case .homeHeader:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(120))
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(51))
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(120))
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(51))
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
                 
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 20, trailing: 0)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 20, trailing: 0)
                 return section
             
             case .search:
@@ -34,9 +34,19 @@ class ViewController: UIViewController {
                 group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
                 
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
+                return section
                 
+            case .categoriesHeader:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(27))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.90), heightDimension: .absolute(27))
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
                 return section
                 
             case .categories:
@@ -50,8 +60,18 @@ class ViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPaging
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
+                return section
                 
+            case .recommendedHeader:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(27))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.90), heightDimension: .absolute(27))
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
+                
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
                 return section
             case .recommended:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(269), heightDimension: .absolute(166))
@@ -64,8 +84,17 @@ class ViewController: UIViewController {
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPaging
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
+                return section
+            case .latestHeader:
+                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(27))
+                let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
+                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.90), heightDimension: .absolute(27))
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5)
                 
+                let section = NSCollectionLayoutSection(group: group)
+                section.contentInsets = NSDirectionalEdgeInsets(top: 15, leading: 24, bottom: 15, trailing: 0)
                 return section
             case .latest:
                 let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(327), heightDimension: .absolute(123))
@@ -77,15 +106,12 @@ class ViewController: UIViewController {
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 24, bottom: 15, trailing: 0)
-                
-                
                 return section
 
             default:
                 return nil
             }
-        
-    }
+        }
     
         return layout
     }()
@@ -110,6 +136,9 @@ class ViewController: UIViewController {
         collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
         collectionView.register(RecommendedCell.nib, forCellWithReuseIdentifier: RecommendedCell.reuseIdentifier)
         collectionView.register(LatestCell.nib, forCellWithReuseIdentifier: LatestCell.reuseIdentifier)
+        collectionView.register(CategoriesHeader.nib, forCellWithReuseIdentifier: CategoriesHeader.reuseIdentifier)
+        collectionView.register(RecommendedHeader.nib, forCellWithReuseIdentifier: RecommendedHeader.reuseIdentifier)
+        collectionView.register(LatestHeader.nib, forCellWithReuseIdentifier: LatestHeader.reuseIdentifier)
         
         collectionView.collectionViewLayout = collectionViewLayout
     }
@@ -130,11 +159,20 @@ class ViewController: UIViewController {
             case .search:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SearchCell.reuseIdentifier, for: indexPath)
                 return cell
+            case .categoriesHeader:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesHeader.reuseIdentifier, for: indexPath)
+                return cell
             case .categories:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.reuseIdentifier, for: indexPath)
                 return cell
+            case .recommendedHeader:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedHeader.reuseIdentifier, for: indexPath)
+                return cell
             case .recommended:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendedCell.reuseIdentifier, for: indexPath)
+                return cell
+            case .latestHeader:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LatestHeader.reuseIdentifier, for: indexPath)
                 return cell
             case .latest:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LatestCell.reuseIdentifier, for: indexPath)
@@ -148,8 +186,11 @@ class ViewController: UIViewController {
         let sections = [
             Section(type: .homeHeader, items: [Item()]),
             Section(type: .search, items: [Item()]),
+            Section(type: .categoriesHeader, items: [Item()]),
             Section(type: .categories, items: [Item(),Item(),Item(),Item(),Item(),Item(),Item()]),
+            Section(type: .recommendedHeader, items: [Item()]),
             Section(type: .recommended, items: [Item(),Item(),Item()]),
+            Section(type: .latestHeader, items: [Item()]),
             Section(type: .latest, items: [Item(), Item(), Item()])
         ]
         
