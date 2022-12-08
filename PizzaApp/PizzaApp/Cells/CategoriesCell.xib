@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l2x-gE-MOU">
                         <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Categories1" translatesAutoresizingMaskIntoConstraints="NO" id="HQH-AG-UwJ">
+                                <rect key="frame" x="15" y="15" width="35" height="35"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="AppRed"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HQH-AG-UwJ" secondAttribute="trailing" constant="14" id="8SB-ei-q5k"/>
+                            <constraint firstItem="HQH-AG-UwJ" firstAttribute="leading" secondItem="l2x-gE-MOU" secondAttribute="leading" constant="15" id="Mq7-ZY-ucA"/>
+                            <constraint firstAttribute="bottom" secondItem="HQH-AG-UwJ" secondAttribute="bottom" constant="15" id="giE-hP-u4C"/>
+                            <constraint firstItem="HQH-AG-UwJ" firstAttribute="top" secondItem="l2x-gE-MOU" secondAttribute="top" constant="15" id="hMS-Oo-bMv"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -40,4 +52,10 @@
             <point key="canvasLocation" x="138.93129770992365" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Categories1" width="35" height="35"/>
+        <namedColor name="AppRed">
+            <color red="1" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,57 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3w8-Me-gb3">
                         <rect key="frame" x="0.0" y="0.0" width="269" height="166"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="wEo-jB-24z">
+                                <rect key="frame" x="0.0" y="0.0" width="269" height="166"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gW-Za-5sc">
+                                <rect key="frame" x="8" y="115" width="207" height="43"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy mozzarella italiano pizza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVk-Xr-Wav">
+                                        <rect key="frame" x="8" y="-8" width="207" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xVk-Xr-Wav" firstAttribute="top" secondItem="9gW-Za-5sc" secondAttribute="top" constant="-8" id="GeX-4B-PEB"/>
+                                    <constraint firstAttribute="trailing" secondItem="xVk-Xr-Wav" secondAttribute="trailing" constant="-8" id="bJX-Pc-jR3"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVk-Xr-Wav" secondAttribute="bottom" constant="8" id="fFV-3E-xN9"/>
+                                    <constraint firstItem="xVk-Xr-Wav" firstAttribute="leading" secondItem="9gW-Za-5sc" secondAttribute="leading" constant="8" id="lTv-xO-VUZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T10-1E-CcW">
+                                <rect key="frame" x="14" y="49" width="79" height="39"/>
+                                <color key="backgroundColor" name="AppRed"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="$19.99">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9gW-Za-5sc" firstAttribute="top" secondItem="T10-1E-CcW" secondAttribute="bottom" constant="27" id="2Mt-XL-w8u"/>
+                            <constraint firstAttribute="bottom" secondItem="wEo-jB-24z" secondAttribute="bottom" id="AxS-DJ-Pil"/>
+                            <constraint firstItem="T10-1E-CcW" firstAttribute="top" secondItem="3w8-Me-gb3" secondAttribute="top" constant="49" id="Fzj-kB-ajs"/>
+                            <constraint firstItem="wEo-jB-24z" firstAttribute="leading" secondItem="3w8-Me-gb3" secondAttribute="leading" id="HgK-8L-xlz"/>
+                            <constraint firstAttribute="trailing" secondItem="wEo-jB-24z" secondAttribute="trailing" id="TrZ-cj-x0j"/>
+                            <constraint firstItem="9gW-Za-5sc" firstAttribute="leading" secondItem="3w8-Me-gb3" secondAttribute="leading" constant="8" id="Vn2-ld-OYz"/>
+                            <constraint firstAttribute="trailing" secondItem="9gW-Za-5sc" secondAttribute="trailing" constant="54" id="bLQ-4i-tho"/>
+                            <constraint firstAttribute="trailing" secondItem="T10-1E-CcW" secondAttribute="trailing" constant="176" id="geW-cs-Gjb"/>
+                            <constraint firstItem="wEo-jB-24z" firstAttribute="top" secondItem="3w8-Me-gb3" secondAttribute="top" id="jXT-nK-D4G"/>
+                            <constraint firstItem="T10-1E-CcW" firstAttribute="leading" secondItem="3w8-Me-gb3" secondAttribute="leading" constant="14" id="l8D-Ev-Vtr"/>
+                            <constraint firstAttribute="bottom" secondItem="9gW-Za-5sc" secondAttribute="bottom" constant="8" id="m4f-Gf-pi0"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -40,4 +91,10 @@
             <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Pizza" width="269" height="166"/>
+        <namedColor name="AppRed">
+            <color red="1" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

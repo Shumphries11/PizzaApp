@@ -3,7 +3,9 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +20,65 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkt-Pw-53j">
                         <rect key="frame" x="0.0" y="0.0" width="327" height="109"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="GHO-sT-eK7">
+                                <rect key="frame" x="12" y="12" width="74" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="9oh-aX-vcC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy mozzarella italiano pizza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avM-Kx-Eui">
+                                <rect key="frame" x="98" y="6" width="207" height="40.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoU-TM-SGX">
+                                <rect key="frame" x="98" y="72" width="225" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$18.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pks-Ht-Dfs">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="cXU-4M-own"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <color key="textColor" name="AppRed"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4mins serve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3P-gs-SSV">
+                                        <rect key="frame" x="151" y="4.0000000000000009" width="69" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="LatestTime"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="d3P-gs-SSV" secondAttribute="bottom" constant="2.6666666666666643" id="10S-8V-hch"/>
+                                    <constraint firstItem="d3P-gs-SSV" firstAttribute="top" secondItem="DoU-TM-SGX" secondAttribute="top" constant="4" id="Dqn-ju-v3V"/>
+                                    <constraint firstAttribute="trailing" secondItem="d3P-gs-SSV" secondAttribute="trailing" constant="5" id="Ugf-aE-df0"/>
+                                    <constraint firstItem="d3P-gs-SSV" firstAttribute="leading" secondItem="Pks-Ht-Dfs" secondAttribute="trailing" constant="92" id="heR-Va-4QD"/>
+                                    <constraint firstItem="Pks-Ht-Dfs" firstAttribute="leading" secondItem="DoU-TM-SGX" secondAttribute="leading" id="mW6-07-E7G"/>
+                                    <constraint firstItem="Pks-Ht-Dfs" firstAttribute="top" secondItem="DoU-TM-SGX" secondAttribute="top" id="mgJ-hg-GrE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DoU-TM-SGX" firstAttribute="leading" secondItem="avM-Kx-Eui" secondAttribute="leading" id="EK7-n9-e0b"/>
+                            <constraint firstItem="GHO-sT-eK7" firstAttribute="top" secondItem="qkt-Pw-53j" secondAttribute="top" constant="12" id="H7S-dt-RsK"/>
+                            <constraint firstItem="GHO-sT-eK7" firstAttribute="leading" secondItem="qkt-Pw-53j" secondAttribute="leading" constant="12" id="NZf-wT-UNX"/>
+                            <constraint firstAttribute="trailing" secondItem="avM-Kx-Eui" secondAttribute="trailing" constant="22" id="PeR-YT-hQw"/>
+                            <constraint firstItem="DoU-TM-SGX" firstAttribute="bottom" secondItem="qkt-Pw-53j" secondAttribute="bottomMargin" constant="-8" id="Yev-xT-NUe"/>
+                            <constraint firstAttribute="bottom" secondItem="GHO-sT-eK7" secondAttribute="bottom" constant="30" id="bdX-vj-zzy"/>
+                            <constraint firstItem="avM-Kx-Eui" firstAttribute="leading" secondItem="GHO-sT-eK7" secondAttribute="trailing" constant="12" id="iCF-fb-bkR"/>
+                            <constraint firstItem="avM-Kx-Eui" firstAttribute="top" secondItem="qkt-Pw-53j" secondAttribute="top" constant="6" id="vRv-9h-EDn"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                                 <real key="value" value="6"/>
@@ -42,7 +102,19 @@
             <connections>
                 <outlet property="latestCell" destination="qkt-Pw-53j" id="twX-SJ-TZ1"/>
             </connections>
-            <point key="canvasLocation" x="138.1679389312977" y="19.366197183098592"/>
+            <point key="canvasLocation" x="135.1145038167939" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Pizza" width="269" height="166"/>
+        <namedColor name="AppRed">
+            <color red="1" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LatestTime">
+            <color red="0.22352941176470587" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

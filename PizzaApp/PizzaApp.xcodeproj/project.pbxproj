@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8B2B03112938450300168A7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2B03102938450300168A7A /* AppDelegate.swift */; };
 		8B2B03132938450300168A7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2B03122938450300168A7A /* SceneDelegate.swift */; };
-		8B2B03152938450300168A7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2B03142938450300168A7A /* ViewController.swift */; };
+		8B2B03152938450300168A7A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2B03142938450300168A7A /* HomeViewController.swift */; };
 		8B2B03182938450300168A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B03162938450300168A7A /* Main.storyboard */; };
 		8B2B031A2938450400168A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B03192938450400168A7A /* Assets.xcassets */; };
 		8B2B031D2938450400168A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2B031B2938450400168A7A /* LaunchScreen.storyboard */; };
@@ -39,13 +39,16 @@
 		8BBCC0AE293E42B100271BA7 /* RecommendedHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBCC0AC293E42B100271BA7 /* RecommendedHeader.xib */; };
 		8BBCC0B1293E45D900271BA7 /* LatestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCC0AF293E45D900271BA7 /* LatestHeader.swift */; };
 		8BBCC0B2293E45D900271BA7 /* LatestHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBCC0B0293E45D900271BA7 /* LatestHeader.xib */; };
+		8BBCC0B4293ECC9A00271BA7 /* LayoutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCC0B3293ECC9A00271BA7 /* LayoutSection.swift */; };
+		8BBCC0B729416D4E00271BA7 /* DetailFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBCC0B529416D4E00271BA7 /* DetailFooter.swift */; };
+		8BBCC0B829416D4E00271BA7 /* DetailFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBCC0B629416D4E00271BA7 /* DetailFooter.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8B2B030D2938450300168A7A /* PizzaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2B03102938450300168A7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2B03122938450300168A7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B2B03142938450300168A7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B2B03142938450300168A7A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8B2B03172938450300168A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B2B03192938450400168A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B2B031C2938450400168A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +79,9 @@
 		8BBCC0AC293E42B100271BA7 /* RecommendedHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendedHeader.xib; sourceTree = "<group>"; };
 		8BBCC0AF293E45D900271BA7 /* LatestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestHeader.swift; sourceTree = "<group>"; };
 		8BBCC0B0293E45D900271BA7 /* LatestHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestHeader.xib; sourceTree = "<group>"; };
+		8BBCC0B3293ECC9A00271BA7 /* LayoutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutSection.swift; sourceTree = "<group>"; };
+		8BBCC0B529416D4E00271BA7 /* DetailFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFooter.swift; sourceTree = "<group>"; };
+		8BBCC0B629416D4E00271BA7 /* DetailFooter.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailFooter.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +119,13 @@
 				8B2B032D2938496700168A7A /* Cells */,
 				8B2B03102938450300168A7A /* AppDelegate.swift */,
 				8B2B03122938450300168A7A /* SceneDelegate.swift */,
-				8B2B03142938450300168A7A /* ViewController.swift */,
+				8B2B03142938450300168A7A /* HomeViewController.swift */,
 				8B2B0340293D033200168A7A /* DetailViewController.swift */,
 				8B2B032E29384B4300168A7A /* Storyboards */,
 				8B2B03192938450400168A7A /* Assets.xcassets */,
 				8B2B033A2938C6B500168A7A /* Theme.xcassets */,
 				8B2B031B2938450400168A7A /* LaunchScreen.storyboard */,
 				8B2B031E2938450400168A7A /* Info.plist */,
-				8B2B0348293D0C4A00168A7A /* UIView + Extensions.swift */,
 			);
 			path = PizzaApp;
 			sourceTree = "<group>";
@@ -130,6 +135,8 @@
 			children = (
 				8B2B03292938495000168A7A /* RegisterableView.swift */,
 				8B2B032A2938495000168A7A /* UICollectionView+Extension.swift */,
+				8BBCC0B3293ECC9A00271BA7 /* LayoutSection.swift */,
+				8B2B0348293D0C4A00168A7A /* UIView + Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -155,6 +162,8 @@
 				8BBCC0AC293E42B100271BA7 /* RecommendedHeader.xib */,
 				8BBCC0AF293E45D900271BA7 /* LatestHeader.swift */,
 				8BBCC0B0293E45D900271BA7 /* LatestHeader.xib */,
+				8BBCC0B529416D4E00271BA7 /* DetailFooter.swift */,
+				8BBCC0B629416D4E00271BA7 /* DetailFooter.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 			files = (
 				8BBCC0AE293E42B100271BA7 /* RecommendedHeader.xib in Resources */,
 				8B2B034D293D0D5800168A7A /* RecommendedCell.xib in Resources */,
+				8BBCC0B829416D4E00271BA7 /* DetailFooter.xib in Resources */,
 				8B2B033929386F6700168A7A /* HomeHeaderCell.xib in Resources */,
 				8B2B0355293D200300168A7A /* DetailHeaderCell.xib in Resources */,
 				8B2B0347293D05C700168A7A /* CategoriesCell.xib in Resources */,
@@ -262,8 +272,9 @@
 				8BBCC0A9293E3F8100271BA7 /* CategoriesHeader.swift in Sources */,
 				8B2B032C2938495000168A7A /* UICollectionView+Extension.swift in Sources */,
 				8B2B033E293CFEDE00168A7A /* SearchCell.swift in Sources */,
+				8BBCC0B729416D4E00271BA7 /* DetailFooter.swift in Sources */,
 				8BBCC0B1293E45D900271BA7 /* LatestHeader.swift in Sources */,
-				8B2B03152938450300168A7A /* ViewController.swift in Sources */,
+				8B2B03152938450300168A7A /* HomeViewController.swift in Sources */,
 				8B2B0346293D05C700168A7A /* CategoriesCell.swift in Sources */,
 				8B2B0349293D0C4A00168A7A /* UIView + Extensions.swift in Sources */,
 				8B2B032B2938495000168A7A /* RegisterableView.swift in Sources */,
@@ -273,6 +284,7 @@
 				8B2B033529385CFA00168A7A /* Item.swift in Sources */,
 				8B2B03112938450300168A7A /* AppDelegate.swift in Sources */,
 				8B2B0341293D033200168A7A /* DetailViewController.swift in Sources */,
+				8BBCC0B4293ECC9A00271BA7 /* LayoutSection.swift in Sources */,
 				8B2B03132938450300168A7A /* SceneDelegate.swift in Sources */,
 				8BBCC0AD293E42B100271BA7 /* RecommendedHeader.swift in Sources */,
 				8B2B033829386F6700168A7A /* HomeHeaderCell.swift in Sources */,

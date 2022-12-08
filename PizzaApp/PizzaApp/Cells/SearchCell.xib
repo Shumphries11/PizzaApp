@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,14 +17,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="328" height="57"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-qJ-HoG">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR9-qJ-HoG">
                         <rect key="frame" x="0.0" y="0.0" width="328" height="57"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nib-Dc-mdG">
+                                <rect key="frame" x="28" y="14" width="6.6666666666666643" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="RUN-3V-Lku"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" name="AppRed"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search recipe here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTk-gB-PEo">
+                                <rect key="frame" x="29.666666666666671" y="11" width="150.66666666666663" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="hFp-ma-HsE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="AppBlush"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fBP-xS-gQa">
+                                <rect key="frame" x="285" y="15.999999999999996" width="24" height="24.000000000000018"/>
+                                <color key="tintColor" name="AppRed"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="AppLightPink"/>
+                        <constraints>
+                            <constraint firstItem="fBP-xS-gQa" firstAttribute="leading" secondItem="vTk-gB-PEo" secondAttribute="trailing" constant="104.67" id="LKw-jc-BlP"/>
+                            <constraint firstAttribute="bottom" secondItem="fBP-xS-gQa" secondAttribute="bottom" constant="16.329999999999998" id="NTc-Hb-j1O"/>
+                            <constraint firstItem="fBP-xS-gQa" firstAttribute="top" secondItem="JR9-qJ-HoG" secondAttribute="top" constant="15" id="OyX-kV-OxQ"/>
+                            <constraint firstItem="vTk-gB-PEo" firstAttribute="leading" secondItem="nib-Dc-mdG" secondAttribute="trailing" constant="-5" id="QQv-gH-RGg"/>
+                            <constraint firstItem="vTk-gB-PEo" firstAttribute="top" secondItem="JR9-qJ-HoG" secondAttribute="top" constant="11" id="XlT-SW-uGh"/>
+                            <constraint firstItem="nib-Dc-mdG" firstAttribute="centerY" secondItem="JR9-qJ-HoG" secondAttribute="centerY" constant="-3.5" id="Xzf-t6-67U"/>
+                            <constraint firstAttribute="trailing" secondItem="fBP-xS-gQa" secondAttribute="trailing" constant="19" id="klI-uZ-5hG"/>
+                            <constraint firstItem="nib-Dc-mdG" firstAttribute="centerX" secondItem="JR9-qJ-HoG" secondAttribute="centerX" constant="-132.66666666666669" id="v9T-n9-D4i"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="JR9-qJ-HoG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="OcS-1Q-Swm"/>
+                <constraint firstItem="JR9-qJ-HoG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="RPY-YV-VUI"/>
+                <constraint firstItem="JR9-qJ-HoG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="dla-4Z-oDR"/>
+                <constraint firstItem="JR9-qJ-HoG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kIg-z8-G1x"/>
+            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
                     <real key="value" value="6"/>
@@ -35,4 +75,16 @@
             <point key="canvasLocation" x="138.93129770992365" y="19.366197183098592"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="AppBlush">
+            <color red="0.76099997758865356" green="0.54100000858306885" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppLightPink">
+            <color red="1" green="0.86299997568130493" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppRed">
+            <color red="1" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

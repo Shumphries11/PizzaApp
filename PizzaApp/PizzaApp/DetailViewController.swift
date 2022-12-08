@@ -13,18 +13,8 @@ class DetailViewController: UIViewController {
             
             
             switch sectionType{
-            case .detailHeader:
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(612))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                
-                let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(612))
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
-                group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-                
-                let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-                return section
-    
+            case .detailHeader: return LayoutSectionFactory.detailHeader()
+            case .detailFooter: return LayoutSectionFactory.detailFooter()
             default:
                 return nil
             }
@@ -47,7 +37,11 @@ class DetailViewController: UIViewController {
     }
     
     private func setupDVCollectionView() {
-        
+        let dvCells: [RegisterableView] = [
+            .nib(DetailHeaderCell.self),
+            .nib(DetailFooter.self)
+        ]
+        collectionView.register(cells: dvCells)
         collectionView.collectionViewLayout = collectionViewLayout
     }
     
@@ -63,6 +57,9 @@ class DetailViewController: UIViewController {
             case .detailHeader:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailHeaderCell.reuseIdentifier, for: indexPath)
                 return cell
+            case .detailFooter:
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailFooter.reuseIdentifier, for: indexPath)
+                return cell
             
             default:
                 return nil
@@ -71,7 +68,7 @@ class DetailViewController: UIViewController {
         }
         let sections = [
             Section(type: .detailHeader, items: [Item()]),
-            
+            Section(type: .detailFooter, items: [Item()])
         ]
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()

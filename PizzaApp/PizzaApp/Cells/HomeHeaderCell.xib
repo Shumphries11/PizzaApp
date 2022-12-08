@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,46 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXs-iS-3GS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrG-47-iP1">
+                                <rect key="frame" x="0.0" y="8" width="66.666666666666671" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="rDu-Sw-Tv3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning John!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kg-WE-0g7">
+                                <rect key="frame" x="0.0" y="34" width="132" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="RRN-U7-dei"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" name="GMBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="txA-Wp-ywl">
+                                <rect key="frame" x="324" y="0.0" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Hi6-SC-DED"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="txA-Wp-ywl" secondAttribute="trailing" id="57K-FQ-yvK"/>
+                            <constraint firstItem="8Kg-WE-0g7" firstAttribute="leading" secondItem="hXs-iS-3GS" secondAttribute="leading" id="6Xe-sD-vOK"/>
+                            <constraint firstItem="JrG-47-iP1" firstAttribute="top" secondItem="hXs-iS-3GS" secondAttribute="top" constant="8" id="AC0-x4-V9R"/>
+                            <constraint firstItem="JrG-47-iP1" firstAttribute="leading" secondItem="hXs-iS-3GS" secondAttribute="leading" id="ad8-db-INg"/>
+                            <constraint firstItem="txA-Wp-ywl" firstAttribute="top" secondItem="hXs-iS-3GS" secondAttribute="top" id="ae4-ck-HAq"/>
+                            <constraint firstItem="8Kg-WE-0g7" firstAttribute="top" secondItem="JrG-47-iP1" secondAttribute="bottom" constant="6" id="wpG-0T-aun"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -33,7 +73,13 @@
             <connections>
                 <outlet property="homeHeader" destination="hXs-iS-3GS" id="ibQ-at-UwU"/>
             </connections>
-            <point key="canvasLocation" x="271.75572519083971" y="58.802816901408455"/>
+            <point key="canvasLocation" x="270.99236641221376" y="58.802816901408455"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Login" width="51" height="51"/>
+        <namedColor name="GMBlack">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.6029999852180481" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
