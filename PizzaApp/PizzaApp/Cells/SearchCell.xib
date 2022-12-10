@@ -39,19 +39,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fBP-xS-gQa">
-                                <rect key="frame" x="285" y="15.999999999999996" width="24" height="24.000000000000018"/>
+                                <rect key="frame" x="282" y="13" width="29" height="29"/>
                                 <color key="tintColor" name="AppRed"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="AppLightPink"/>
                         <constraints>
-                            <constraint firstItem="fBP-xS-gQa" firstAttribute="leading" secondItem="vTk-gB-PEo" secondAttribute="trailing" constant="104.67" id="LKw-jc-BlP"/>
-                            <constraint firstAttribute="bottom" secondItem="fBP-xS-gQa" secondAttribute="bottom" constant="16.329999999999998" id="NTc-Hb-j1O"/>
-                            <constraint firstItem="fBP-xS-gQa" firstAttribute="top" secondItem="JR9-qJ-HoG" secondAttribute="top" constant="15" id="OyX-kV-OxQ"/>
+                            <constraint firstItem="fBP-xS-gQa" firstAttribute="leading" secondItem="vTk-gB-PEo" secondAttribute="trailing" constant="101.66666666666669" id="LKw-jc-BlP"/>
+                            <constraint firstAttribute="bottom" secondItem="fBP-xS-gQa" secondAttribute="bottom" constant="14.333333333333329" id="NTc-Hb-j1O"/>
+                            <constraint firstItem="fBP-xS-gQa" firstAttribute="top" secondItem="JR9-qJ-HoG" secondAttribute="top" constant="12.000000000000002" id="OyX-kV-OxQ"/>
                             <constraint firstItem="vTk-gB-PEo" firstAttribute="leading" secondItem="nib-Dc-mdG" secondAttribute="trailing" constant="-5" id="QQv-gH-RGg"/>
                             <constraint firstItem="vTk-gB-PEo" firstAttribute="top" secondItem="JR9-qJ-HoG" secondAttribute="top" constant="11" id="XlT-SW-uGh"/>
                             <constraint firstItem="nib-Dc-mdG" firstAttribute="centerY" secondItem="JR9-qJ-HoG" secondAttribute="centerY" constant="-3.5" id="Xzf-t6-67U"/>
-                            <constraint firstAttribute="trailing" secondItem="fBP-xS-gQa" secondAttribute="trailing" constant="19" id="klI-uZ-5hG"/>
+                            <constraint firstAttribute="trailing" secondItem="fBP-xS-gQa" secondAttribute="trailing" constant="17" id="klI-uZ-5hG"/>
                             <constraint firstItem="nib-Dc-mdG" firstAttribute="centerX" secondItem="JR9-qJ-HoG" secondAttribute="centerX" constant="-132.66666666666669" id="v9T-n9-D4i"/>
                         </constraints>
                     </view>
