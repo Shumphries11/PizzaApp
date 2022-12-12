@@ -116,15 +116,8 @@
 			children = (
 				8B2B033129385CC400168A7A /* Models */,
 				8B2B03282938495000168A7A /* Utilities */,
-				8B2B032D2938496700168A7A /* Cells */,
-				8B2B03102938450300168A7A /* AppDelegate.swift */,
-				8B2B03122938450300168A7A /* SceneDelegate.swift */,
-				8B2B03142938450300168A7A /* HomeViewController.swift */,
-				8B2B0340293D033200168A7A /* DetailViewController.swift */,
-				8B2B032E29384B4300168A7A /* Storyboards */,
-				8B2B03192938450400168A7A /* Assets.xcassets */,
-				8B2B033A2938C6B500168A7A /* Theme.xcassets */,
-				8B2B031B2938450400168A7A /* LaunchScreen.storyboard */,
+				8B2B98A22946D31F00F0B4D5 /* App */,
+				8B2B98A12946D25200F0B4D5 /* View Controllers */,
 				8B2B031E2938450400168A7A /* Info.plist */,
 			);
 			path = PizzaApp;
@@ -184,6 +177,29 @@
 				8B2B033429385CFA00168A7A /* Item.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8B2B98A12946D25200F0B4D5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B03142938450300168A7A /* HomeViewController.swift */,
+				8B2B0340293D033200168A7A /* DetailViewController.swift */,
+				8B2B032D2938496700168A7A /* Cells */,
+				8B2B032E29384B4300168A7A /* Storyboards */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8B2B98A22946D31F00F0B4D5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B03192938450400168A7A /* Assets.xcassets */,
+				8B2B033A2938C6B500168A7A /* Theme.xcassets */,
+				8B2B03102938450300168A7A /* AppDelegate.swift */,
+				8B2B03122938450300168A7A /* SceneDelegate.swift */,
+				8B2B031B2938450400168A7A /* LaunchScreen.storyboard */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
