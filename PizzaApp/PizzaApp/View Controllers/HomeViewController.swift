@@ -60,6 +60,7 @@ class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.register(cells: cells)
         collectionView.collectionViewLayout = collectionViewLayout
+        self.title = "Home"
     }
     
     

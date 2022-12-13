@@ -43,6 +43,7 @@ class DetailViewController: UIViewController {
         ]
         collectionView.register(cells: dvCells)
         collectionView.collectionViewLayout = collectionViewLayout
+        self.title = "Detail"
     }
     
     private func configureDVDataSource() {
